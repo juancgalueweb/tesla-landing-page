@@ -1,5 +1,6 @@
 ---
-const { color, title, subtitle, underline, extraAnchorTag } = Astro.props
+const { color, title, subtitle, underline, extraAnchorTag, accesoriesFooter } =
+  Astro.props
 const textColor = `text-${color}`
 const isUnderline = `${textColor} text-sm underline underline-offset-4`
 ---
@@ -29,6 +30,30 @@ const isUnderline = `${textColor} text-sm underline underline-offset-4`
         <p class='absolute left-0 right-0 ml-auto mr-auto bottom-4 text-xs underline underline-offset-4'>
           <a href='#'>Disponible con Moves III</a>
         </p>
+      ) : null
+    }
+    {
+      accesoriesFooter ? (
+        <ul class='absolute flex justify-center left-0 right-0 ml-auto mr-auto bottom-4 text-xs [&>li>a]:transition-colors [&>li>a]:duration-300 [&>li>a]:font-normal [&>li>a]:text-[#5C5E62] [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-2'>
+          <li>
+            <a href='#'>Tesla &copy; 2023</a>
+          </li>
+          <li>
+            <a href='#'>Privacidad y legal</a>
+          </li>
+          <li>
+            <a href='#'>Contacto</a>
+          </li>
+          <li>
+            <a href='#'>Noticias</a>
+          </li>
+          <li>
+            <a href='#'>Seguir informado</a>
+          </li>
+          <li>
+            <a href='#'>Localización de tiendas</a>
+          </li>
+        </ul>
       ) : null
     }
   </div>

@@ -1,0 +1,18 @@
+---
+import Section from './Section.astro'
+---
+
+<Section title='Accesorios' color='black' accesoriesFooter>
+  <div class='flex mx-auto gap-x-4' slot='footer'>
+    <a
+      class='border-[3px] border-[#232429] bg-[#232429] text-sm rounded font-medium text-white px-16 py-2 transition-colors hover:bg-neutral-800 hover:border-neutral-800 inline-flex justify-center items-center'
+      href='#'>Comprar ahora</a
+    >
+  </div>
+  <img
+    slot='background'
+    src='/tesla-accessories.avif'
+    alt='Accesorio'
+    class='h-full w-full object-cover object-center'
+  />
+</Section>
