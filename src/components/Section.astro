@@ -1,5 +1,5 @@
 ---
-const { color, title, subtitle, underline } = Astro.props
+const { color, title, subtitle, underline, extraAnchorTag } = Astro.props
 const textColor = `text-${color}`
 const isUnderline = `${textColor} text-sm underline underline-offset-4`
 ---
@@ -17,9 +17,20 @@ const isUnderline = `${textColor} text-sm underline underline-offset-4`
         {subtitle}
       </p>
     </header>
-    <footer class='flex flex-col flex-grow justify-end pb-20'>
+    <footer
+      class={extraAnchorTag
+        ? 'flex flex-col flex-grow justify-end pb-16'
+        : 'flex flex-col flex-grow justify-end pb-20'}
+    >
       <slot name='footer' />
     </footer>
+    {
+      extraAnchorTag ? (
+        <p class='absolute left-0 right-0 ml-auto mr-auto bottom-4 text-xs underline underline-offset-4'>
+          <a href='#'>Disponible con Moves III</a>
+        </p>
+      ) : null
+    }
   </div>
   <div class='absolute top-0 bottom-0 h-full w-full z-10'>
     <slot name='background' />
