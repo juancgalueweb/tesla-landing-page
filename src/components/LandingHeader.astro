@@ -9,7 +9,7 @@ import Logo from './Logo.astro'
   <div class='flex flex-grow basis-0'>
     <a href='#top'> <Logo /></a>
   </div>
-  <nav>
+  <nav class='hidden xl:block'>
     <ul
       class='flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-300 [&>li>a]:font-medium [&>li>a]:text-current [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2'
     >
@@ -25,10 +25,12 @@ import Logo from './Logo.astro'
     <ul
       class='flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-300 [&>li>a]:font-medium [&>li>a]:text-current [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2'
     >
-      <li><a href='#'>Soporte</a></li>
-      <li><a href='#'>Tienda</a></li>
-      <li><a href='#'>Cuenta</a></li>
-      <li><a href='#'>Menú</a></li>
+      <li class='hidden xl:block'><a href='#'>Soporte</a></li>
+      <li class='hidden xl:block'><a href='#'>Tienda</a></li>
+      <li class='hidden xl:block'><a href='#'>Cuenta</a></li>
+      <li class='bg-black/5 backdropbackdrop-blur-lg rounded xl:bg-transparent'>
+        <a href='#'>Menú</a>
+      </li>
     </ul>
   </nav>
 
